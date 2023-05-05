@@ -6,4 +6,4 @@ require("general")
 require("status")
 require("mason_config")
 require("lsp_config")
-
+require("format")
