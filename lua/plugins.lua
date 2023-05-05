@@ -15,5 +15,9 @@ return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
   use "nvim-treesitter/nvim-treesitter"
   use "ellisonleao/gruvbox.nvim"
+  use "windwp/nvim-autopairs"
+  use  {"nvim-lualine/lualine.nvim", 
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+}
 
 end)
