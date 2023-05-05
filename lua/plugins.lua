@@ -13,4 +13,7 @@ packer.init({
 
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+  use "nvim-treesitter/nvim-treesitter"
+  use "ellisonleao/gruvbox.nvim"
+
 end)
