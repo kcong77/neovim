@@ -1,4 +1,3 @@
 ### To get started, follow these steps:
-1. Install `neovim nodejs python`
-2. Run this command to install packer `git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim`
-3. Clone this repo into `~/.config/`
+1. Require `neovim nodejs python`
+2. Clone this repo into `~/.config/` and start with `nvim ~/.config/nvim/init.lua`
