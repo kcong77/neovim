@@ -30,9 +30,12 @@ return packer.startup(function(use)
   use "ellisonleao/gruvbox.nvim"
   use "windwp/nvim-autopairs"
   use  {"nvim-lualine/lualine.nvim", 
-  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-}
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
   use "lewis6991/gitsigns.nvim"
+  
+  use "neovim/nvim-lspconfig"
+  use "williamboman/mason.nvim"
+  use "williamboman/mason-lspconfig.nvim"
   if packer_bootstrap then
     require('packer').sync()
   end

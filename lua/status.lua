@@ -9,9 +9,6 @@ status.setup {
     theme = 'gruvbox',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
-    refresh = {
-      statusline = 1000,
-    }
   },
   sections = {
     lualine_a = {'mode'},

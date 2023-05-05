@@ -5,5 +5,5 @@ end
 
 
 treesitter.setup({
-	ensure_installed = {"c", "cpp", "lua", "markdown", "bash", "yaml", "json", "make", "cmake", "llvm", "toml"}
+	ensure_installed = {"c", "cpp", "lua", "markdown", "bash", "yaml"}
 })
