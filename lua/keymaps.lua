@@ -8,6 +8,6 @@ vim.g.maplocalleader = " "
 keymap(
   "n",
   "<leader>f",
-  "<CMD>lua vim.lsp.buf.format()<CR><CMD>echo '---------------------------------> FORMATTED <---------------------------------'<CR>",
+  "<CMD>lua vim.lsp.buf.format({ async = true })<CR><CMD>echo '---------------------------------> FORMATTED <---------------------------------'<CR>",
   opts
 )

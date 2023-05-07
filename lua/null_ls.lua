@@ -5,6 +5,7 @@ if not nullls_ok then
 end
 
 nullls.setup({
+  autostart = true,
   sources = {
     nullls.builtins.formatting.stylua.with({
       filetypes = { "lua" },
