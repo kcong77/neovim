@@ -22,6 +22,14 @@ if not mason_nullls_ok then
   return
 end
 
+local cmp_ok, cmp = pcall(require, "cmp")
+if not cmp_ok then
+  print("cmp not working!")
+  return
+end
+
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 mason.setup({
   ui = {
     icons = {
@@ -60,8 +68,10 @@ lsp.lua_ls.setup({
       },
     },
   },
+  capabilities = capabilities,
 })
 
 lsp.clangd.setup({
   filetypes = { "c", "cpp" },
+  capabilities = capabilities,
 })
