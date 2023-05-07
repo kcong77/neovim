@@ -58,8 +58,15 @@ if not mason_nullls_ok then
   return
 end
 
-local formatting = nullls.builtins.formatting
+-- Format
+nullls.setup({
+  sources = {
+    nullls.builtins.formatting.stylua,
+    nullls.builtins.formatting.clang_format,
+  },
+})
 
+-- Setting theme
 theme.setup({
   undercurl = true,
   underline = true,
@@ -83,35 +90,35 @@ mason.setup({
   },
 })
 
+-- Install lsp and formatter
 mason_config.setup({
   ensure_installed = { "lua_ls", "clangd" },
   automatic_installation = false,
 })
 
 mason_nullls.setup({
-    ensure_installed = { "stylua", "clang_format" }
+  ensure_installed = { "stylua", "clang_format" },
 })
 
 treesitter.setup({
-  ensure_installed = { "lua", "c", "cpp" }
+  ensure_installed = { "lua", "c", "cpp" },
 })
 
-status.setup {
+status.setup({
   options = {
     icons_enabled = true,
-    theme = 'gruvbox',
-    component_separators = { left = '', right = '' },
-    section_separators = { left = '', right = '' },
+    theme = "gruvbox",
+    component_separators = { left = "", right = "" },
+    section_separators = { left = "", right = "" },
   },
   sections = {
-    lualine_a = { 'mode' },
-    lualine_b = { 'branch' },
-    lualine_c = { { 'filename', path = 1, symbols = { modified = "[~]" } } },
-    lualine_x = { 'encoding', 'filetype' },
-    lualine_y = { 'progress' },
+    lualine_a = { "mode" },
+    lualine_b = { "branch" },
+    lualine_c = { { "filename", path = 1, symbols = { modified = "[~]" } } },
+    lualine_x = { "encoding", "filetype" },
+    lualine_y = { "progress" },
   },
-}
-
+})
 
 autopairs.setup({
   disable_filetype = { "TelescopePrompt", "vim" },
@@ -119,15 +126,7 @@ autopairs.setup({
 
 gs.setup()
 
-nullls.setup({
-  formatting.stylua.with({
-    filetypes = { "lua" }
-  }),
-  formatting.clang_format.with({
-    filetypes = { "c", "cpp" }
-  })
-})
-
+-- LSP
 lsp.lua_ls.setup({
   filetypes = { "lua" },
   settings = {
