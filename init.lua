@@ -1,5 +1,6 @@
 require("options")
 require("plugins")
-require("plugins_settings")
-
-
+require("settings")
+require("keymaps")
+require("null_ls")
+require("lsp")
