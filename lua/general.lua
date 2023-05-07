@@ -1,40 +1,9 @@
+-- Theme config
 local theme_ok, theme = pcall(require, "gruvbox")
 if not theme_ok then
   print("gruvbox not working!")
   return
 end
-
-local treesitter_ok, treesitter = pcall(require, "nvim-treesitter.configs")
-if not treesitter_ok then
-  print("treesitter not working!")
-  return
-end
-
-local status_ok, status = pcall(require, "lualine")
-if not status_ok then
-  print("lualine not working!")
-  return
-end
-
-local autopairs_ok, autopairs = pcall(require, "nvim-autopairs")
-if not autopairs_ok then
-  print("autopairs not working!")
-  return
-end
-
-local gs_ok, gs = pcall(require, "gitsigns")
-if not gs_ok then
-  print("gitsigns not working!")
-  return
-end
-
-local impatient_ok, impatient = pcall(require, "impatient")
-if not impatient_ok then
-  return
-end
-
-impatient.enable_profile()
-
 theme.setup({
   undercurl = true,
   underline = true,
@@ -47,7 +16,14 @@ theme.setup({
   },
   transparent_mode = true,
 })
+vim.cmd([[colorscheme gruvbox]])
 
+-- Syntax highlighting
+local treesitter_ok, treesitter = pcall(require, "nvim-treesitter.configs")
+if not treesitter_ok then
+  print("treesitter not working!")
+  return
+end
 treesitter.setup({
   ensure_installed = { "lua", "c", "cpp", "bash", "markdown" },
   highlight = {
@@ -56,6 +32,12 @@ treesitter.setup({
   },
 })
 
+-- Status bar
+local status_ok, status = pcall(require, "lualine")
+if not status_ok then
+  print("lualine not working!")
+  return
+end
 status.setup({
   options = {
     icons_enabled = true,
@@ -72,10 +54,27 @@ status.setup({
   },
 })
 
+-- Auto close tag
+local autopairs_ok, autopairs = pcall(require, "nvim-autopairs")
+if not autopairs_ok then
+  print("autopairs not working!")
+  return
+end
 autopairs.setup({
   disable_filetype = { "TelescopePrompt", "vim" },
 })
 
+-- Git change status
+local gs_ok, gs = pcall(require, "gitsigns")
+if not gs_ok then
+  print("gitsigns not working!")
+  return
+end
 gs.setup()
 
-vim.cmd([[colorscheme gruvbox]])
+-- Cache plugins
+local impatient_ok, impatient = pcall(require, "impatient")
+if not impatient_ok then
+  return
+end
+impatient.enable_profile()
