@@ -1,53 +1,16 @@
-local mason_ok, mason = pcall(require, "mason")
-if not mason_ok then
-  print("mason not working!")
-  return
-end
-
-local mason_config_ok, mason_config = pcall(require, "mason-lspconfig")
-if not mason_config_ok then
-  print("mason config not working!")
-  return
-end
-
 local lsp_ok, lsp = pcall(require, "lspconfig")
 if not lsp_ok then
   print("lsp not working!")
   return
 end
 
-local mason_nullls_ok, mason_nullls = pcall(require, "mason-null-ls")
-if not mason_nullls_ok then
-  print("mason null_ls not working!")
+local cmp_lsp_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_lsp_ok then
+  print("cmp_nvim_lsp not working!")
   return
 end
 
-local cmp_ok, cmp = pcall(require, "cmp")
-if not cmp_ok then
-  print("cmp not working!")
-  return
-end
-
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-mason.setup({
-  ui = {
-    icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗",
-    },
-  },
-})
-
-mason_config.setup({
-  ensure_installed = { "lua_ls", "clangd" },
-  automatic_installation = false,
-})
-
-mason_nullls.setup({
-  ensure_installed = { "stylua", "clang_format" },
-})
+local capabilities = cmp_lsp.default_capabilities()
 
 lsp.lua_ls.setup({
   filetypes = { "lua" },
@@ -73,5 +36,15 @@ lsp.lua_ls.setup({
 
 lsp.clangd.setup({
   filetypes = { "c", "cpp" },
+  capabilities = capabilities,
+})
+
+lsp.bashls.setup({
+  filetypes = { "sh" },
+  capabilities = capabilities,
+})
+
+lsp.marksman.setup({
+  filetypes = { "markdown" },
   capabilities = capabilities,
 })

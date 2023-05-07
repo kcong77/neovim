@@ -5,10 +5,6 @@ if not cmp_ok then
 end
 
 cmp.setup({
-  mapping = {
-
-    ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "s" }),
-  },
   sources = cmp.config.sources({
     { name = "nvim_lsp" },
     { name = "buffer" },

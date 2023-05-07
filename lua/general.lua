@@ -42,7 +42,7 @@ theme.setup({
 })
 
 treesitter.setup({
-  ensure_installed = { "lua", "c", "cpp" },
+  ensure_installed = { "lua", "c", "cpp", "bash", "markdown" },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,

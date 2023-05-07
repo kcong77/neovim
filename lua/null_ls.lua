@@ -12,5 +12,11 @@ nullls.setup({
     nullls.builtins.formatting.clang_format.with({
       filetypes = { "c", "cpp" },
     }),
+    nullls.builtins.formatting.shfmt.with({
+      filetypes = { "sh" },
+    }),
+    nullls.builtins.formatting.prettierd.with({
+      filetypes = { "markdown" },
+    }),
   },
 })

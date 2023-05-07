@@ -5,4 +5,9 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-keymap("n", "<leader>f", "<CMD>lua vim.lsp.buf.format()<CR><CMD>echo 'FORMATTED'<CR>", opts)
+keymap(
+  "n",
+  "<leader>f",
+  "<CMD>lua vim.lsp.buf.format()<CR><CMD>echo '---------------------------------> FORMATTED <---------------------------------'<CR>",
+  opts
+)
