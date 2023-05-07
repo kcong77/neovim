@@ -13,8 +13,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Format code when <leader>f
-keymap("n", "<leader>f", "<CMD>lua vim.lsp.buf.format({ async = true })<CR><CMD>echo 'FORMATTED'<CR>", opts)
+keymap("n", "<leader>s", "<CMD>lua vim.lsp.buf.format({ async = true })<CR><CMD>echo 'FORMATTED'<CR>", opts)
 -- Find files in current folder
-keymap("n", "<leader>s", "<CMD>Telescope find_files<CR>", opts)
+keymap("n", "<leader>f", "<CMD>Telescope find_files<CR>", opts)
 -- Find words in current folder
 keymap("n", "<leader>g", "<CMD>Telescope live_grep<CR>", opts)
