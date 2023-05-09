@@ -5,17 +5,10 @@ end
 
 telescope.setup({
   defaults = {
+    layout_strategy = "vertical",
     layout_config = {
-      vertical = { width = 0.5 },
-    },
-  },
-  pickers = {
-    find_files = {
-      theme = "dropdown",
-      previewer = false,
-    },
-    live_grep = {
-      theme = "ivy",
+      width = 0.85,
+      height = 0.85,
     },
   },
 })

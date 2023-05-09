@@ -1,4 +1,3 @@
--- Formatter config
 local nullls_ok, nullls = pcall(require, "null-ls")
 if not nullls_ok then
   print("null_ls not working")

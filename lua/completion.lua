@@ -1,4 +1,3 @@
--- Code completion
 local cmp_ok, cmp = pcall(require, "cmp")
 if not cmp_ok then
   print("cmp not working!")
