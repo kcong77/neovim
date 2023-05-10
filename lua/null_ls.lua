@@ -17,7 +17,7 @@ nullls.setup({
       filetypes = { "sh" },
     }),
     nullls.builtins.formatting.prettierd.with({
-      filetypes = { "markdown" },
+      filetypes = { "markdown", "json", "yaml"  },
     }),
   },
 })
