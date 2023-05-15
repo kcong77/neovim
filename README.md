@@ -14,6 +14,6 @@
   - [ripgrep](https://formulae.brew.sh/formula/ripgrep)
 
 - Direction:
-  - clone repo in `~/.config/`
-  - run `nvim ~/.config/nvim/init.lua`
-  - run `PackerSync`
+  1. clone repo in `~/.config/`
+  2. run `nvim ~/.config/nvim/init.lua`
+  3. run `PackerSync`
