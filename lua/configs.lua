@@ -1,4 +1,4 @@
-local loader_ok, loader = pcall(require, "loader")
+local loader_ok, loader = pcall(require, "loader_plugins")
 if not loader_ok then
 	print("loader not working!")
 	return
