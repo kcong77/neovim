@@ -23,7 +23,7 @@ if not treesitter_ok then
   return
 end
 treesitter.setup({
-  ensure_installed = { "lua", "c", "cpp", "bash", "markdown" },
+  ensure_installed = { "lua", "c", "cpp", "bash", "markdown_inline" },
  indent = {
     enable = true,
   },
