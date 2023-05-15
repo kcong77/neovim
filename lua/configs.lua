@@ -1,8 +1,4 @@
-local loader_ok, loader = pcall(require, "loader_plugins")
-if not loader_ok then
-	print("loader not working!")
-	return
-end
+local loader = require("loader_plugins")
 
 local gruvbox = loader.gruvbox
 local treesitter = loader.treesitter
