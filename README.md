@@ -16,6 +16,6 @@
 ---
 
 - Setup:
-  - run `git clone https://github.com/kcong77/neovim.git ~/.config/`
+  - run `git clone https://github.com/kcong77/neovim.git ~/.config/nvim`
   - run `nvim ~/.config/nvim/init.lua`
   - run `:PackerSync`
