@@ -1,5 +1,19 @@
-### To get started, follow these steps:
+- Requirements:
 
-1. Require `neovim nodejs python rust zip unzip tar curl git wget gzip`
-2. Require `ripgrep for Telescope live_grep`
-3. Clone this repo into `~/.config/` and start with `nvim ~/.config/nvim/init.lua`
+  - [neovim](https://formulae.brew.sh/formula/neovim)
+  - [nodejs](https://formulae.brew.sh/formula/node@18)
+  - [python](https://www.python.org/downloads)
+  - [rust](https://formulae.brew.sh/formula/rust)
+  - [zip](https://formulae.brew.sh/formula/zip)
+  - [unzip](https://formulae.brew.sh/formula/unzip)
+  - [tar](https://formulae.brew.sh/formula/gnu-tar)
+  - [gzip](https://formulae.brew.sh/formula/gzip)
+  - [curl](https://formulae.brew.sh/formula/curl)
+  - [git](https://formulae.brew.sh/formula/git)
+  - [wget](https://formulae.brew.sh/formula/wget)
+  - [ripgrep](https://formulae.brew.sh/formula/ripgrep)
+
+- Direction:
+  - clone repo in `~/.config/`
+  - run `nvim ~/.config/nvim/init.lua`
+  - run `PackerSync`

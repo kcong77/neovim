@@ -24,6 +24,9 @@ if not treesitter_ok then
 end
 treesitter.setup({
   ensure_installed = { "lua", "c", "cpp", "bash", "markdown" },
+ indent = {
+    enable = true,
+  },
   highlight = {
     enable = true,
     additional_vim_regex_highlighting = false,
