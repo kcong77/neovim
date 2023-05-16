@@ -7,7 +7,7 @@ if success then
 				filetypes = { "lua" },
 			}),
 			null.builtins.formatting.clang_format.with({
-				filetypes = {  "cpp" },
+				filetypes = { "cpp" },
 			}),
 			null.builtins.formatting.shfmt.with({
 				filetypes = { "sh" },
