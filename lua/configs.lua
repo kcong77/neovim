@@ -147,9 +147,8 @@ function SETUP()
 	impatient.enable_profile()
 end
 
-if LOADER.ALL_PLUGINS_LOADED_SUCCESSFULL == true then
-  SETUP()
+SETUP()
 
-else 
-  print("fail")
+if LOADER.STATUS then
+	SETUP()
 end
