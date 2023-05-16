@@ -3,6 +3,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.undofile = true
 vim.opt.tabstop = 2
+vim.opt.timeoutlen = 200
 vim.opt.expandtab = true
 vim.opt.scrolloff = 15
 vim.opt.shiftwidth = 2
