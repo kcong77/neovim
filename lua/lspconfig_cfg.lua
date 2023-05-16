@@ -6,6 +6,10 @@ end
 
 local capabilities = cmp_lsp.default_capabilities()
 
+vim.diagnostic.config({
+	underline = false,
+})
+
 if success then
 	lspconfig.lua_ls.setup({
 		filetypes = { "lua" },
