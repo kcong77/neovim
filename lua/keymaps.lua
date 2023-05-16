@@ -14,4 +14,4 @@ keymap("n", "<leader>s", "<CMD>lua vim.lsp.buf.format({ async = true})<CR><CMD>w
 keymap("n", "<leader>q", "<CMD>qa!<CR>", opts)
 keymap("n", "<leader>f", "<CMD>Telescope find_files<CR>", opts)
 keymap("n", "<leader>g", "<CMD>Telescope grep_string<CR>", opts)
-keymap("n", "<leader>d", "<CMD>Telescope live_grep<CR>", opts)
+keymap("n", "<leader>h", "<CMD>Telescope live_grep<CR>", opts)

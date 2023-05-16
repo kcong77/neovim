@@ -11,41 +11,39 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-local packer_ok, packer = pcall(require, "packer")
-if not packer_ok then
-  return
+local success, packer = pcall(require, "packer")
+if success then
+  packer.init({
+    display = {
+      open_fn = function()
+        return require("packer.util").float({ border = "rounded" })
+      end,
+    },
+  })
+
+  return packer.startup(function(use)
+    use("wbthomason/packer.nvim")
+    use("nvim-lua/plenary.nvim")
+    use("ellisonleao/gruvbox.nvim")
+    use("windwp/nvim-autopairs")
+    use("nvim-treesitter/nvim-treesitter")
+    use("nvim-lualine/lualine.nvim")
+    use({ "nvim-tree/nvim-web-devicons", opt = true })
+    use("lewis6991/gitsigns.nvim")
+    use("nvim-telescope/telescope.nvim")
+    use("lewis6991/impatient.nvim")
+    use("williamboman/mason.nvim")
+    use("williamboman/mason-lspconfig.nvim")
+    use("neovim/nvim-lspconfig")
+    use("jay-babu/mason-null-ls.nvim")
+    use("jose-elias-alvarez/null-ls.nvim")
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-nvim-lsp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
+
+    if packer_bootstrap then
+      packer.sync()
+    end
+  end)
 end
-
-packer.init({
-  display = {
-    open_fn = function()
-      return require("packer.util").float({ border = "rounded" })
-    end,
-  },
-})
-
-return packer.startup(function(use)
-  use("wbthomason/packer.nvim")
-  use("nvim-lua/plenary.nvim")
-  use("nvim-treesitter/nvim-treesitter")
-  use("ellisonleao/gruvbox.nvim")
-  use("windwp/nvim-autopairs")
-  use({ "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true } })
-  use("lewis6991/gitsigns.nvim")
-  use("nvim-telescope/telescope.nvim")
-
-  use("neovim/nvim-lspconfig")
-  use("williamboman/mason.nvim")
-  use("williamboman/mason-lspconfig.nvim")
-  use("jay-babu/mason-null-ls.nvim")
-  use("jose-elias-alvarez/null-ls.nvim")
-  use("hrsh7th/nvim-cmp")
-  use("hrsh7th/cmp-nvim-lsp")
-  use("hrsh7th/cmp-buffer")
-  use("hrsh7th/cmp-path")
-  use("lewis6991/impatient.nvim")
-
-  if packer_bootstrap then
-    require("packer").sync()
-  end
-end)
