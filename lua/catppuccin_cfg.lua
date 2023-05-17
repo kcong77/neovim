@@ -4,6 +4,6 @@ if success then
 		transparent_background = true,
 		-- mocha flavour background color: 0x1e1e2e or rgb(30, 30, 46)
 	})
+  vim.cmd.colorscheme("catppuccin")
 end
 
-vim.cmd.colorscheme("catppuccin")
