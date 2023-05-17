@@ -24,7 +24,7 @@ if success then
 	return packer.startup(function(use)
 		use("wbthomason/packer.nvim")
 		use("nvim-lua/plenary.nvim")
-		use("ellisonleao/gruvbox.nvim")
+		use({ "catppuccin/nvim", as = "catppuccin" })
 		use("windwp/nvim-autopairs")
 		use("nvim-treesitter/nvim-treesitter")
 		use("nvim-lualine/lualine.nvim")

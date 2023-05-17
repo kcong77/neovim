@@ -1,7 +1,7 @@
 require("options")
 require("plugins")
 require("keymaps")
-require("gruvbox_cfg")
+require("catppuccin_cfg")
 require("autopairs_cfg")
 require("treesitter_cfg")
 require("lualine_cfg")

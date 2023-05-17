@@ -1,5 +1,4 @@
 - Requirements:
-
   - [neovim](https://formulae.brew.sh/formula/neovim)
   - [nodejs](https://formulae.brew.sh/formula/node@18)
   - [python](https://www.python.org/downloads)
