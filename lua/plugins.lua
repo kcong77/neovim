@@ -31,7 +31,6 @@ if success then
 		use({ "nvim-tree/nvim-web-devicons", opt = true })
 		use("lewis6991/gitsigns.nvim")
 		use("nvim-telescope/telescope.nvim")
-		use("lewis6991/impatient.nvim")
 		use("williamboman/mason.nvim")
 		use("williamboman/mason-lspconfig.nvim")
 		use("neovim/nvim-lspconfig")
