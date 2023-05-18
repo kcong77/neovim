@@ -44,4 +44,8 @@ if success then
 		filetypes = { "markdown" },
 		capabilities = capabilities,
 	})
+	lspconfig.texlab.setup({
+		filetypes = { "tex" },
+		capabilities = capabilities,
+	})
 end

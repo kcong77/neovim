@@ -1,7 +1,6 @@
 local success, null = pcall(require, "null-ls")
 if success then
 	null.setup({
-		autostart = true,
 		sources = {
 			null.builtins.formatting.stylua.with({
 				filetypes = { "lua" },
