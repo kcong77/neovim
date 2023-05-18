@@ -14,9 +14,6 @@ if success then
 			null.builtins.formatting.prettierd.with({
 				filetypes = { "markdown" },
 			}),
-			null.builtins.formatting.latexindent.with({
-				filetypes = { "tex" },
-			}),
 		},
 	})
 end
