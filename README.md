@@ -1,4 +1,5 @@
 - Requirements:
+
   - [neovim](https://formulae.brew.sh/formula/neovim)
   - [nodejs](https://formulae.brew.sh/formula/node@18)
   - [python](https://www.python.org/downloads)
@@ -15,6 +16,7 @@
 ---
 
 - Setup:
+
   - run `git clone https://github.com/kcong77/neovim.git ~/.config/nvim`
   - run `nvim ~/.config/nvim/init.lua`
   - run `:PackerSync`
