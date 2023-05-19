@@ -12,7 +12,10 @@ if success then
 				filetypes = { "sh" },
 			}),
 			null.builtins.formatting.prettierd.with({
-				filetypes = { "markdown" },
+				filetypes = { "markdown", "json", "yaml", "html", "css", "scss", "javascript", "typescript", "graphql" },
+			}),
+			null.builtins.formatting.black.with({
+				filetypes = { "python" },
 			}),
 		},
 	})

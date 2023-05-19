@@ -33,7 +33,7 @@ if success then
 		capabilities = capabilities,
 	})
 	lspconfig.clangd.setup({
-		filetypes = { "cpp" },
+		filetypes = { "cpp", "c" },
 		capabilities = capabilities,
 	})
 	lspconfig.bashls.setup({
@@ -47,5 +47,8 @@ if success then
 	lspconfig.texlab.setup({
 		filetypes = { "tex" },
 		capabilities = capabilities,
+	})
+	lspconfig.pyright.setup({
+		filetypes = { "python" },
 	})
 end
