@@ -11,6 +11,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- keymap("n", "<CMD>Format<CR>", "<CMD>lua vim.lsp.buf.format({ async = true })<CR><CMD>echo 'FORMATTED'<CR>", opts)
 vim.cmd("command! Format lua vim.lsp.buf.format({ async = true })")
+vim.cmd("command! Latex VimtexCompile")
 keymap("n", "<leader>x", "<CMD>VimtexCompile<CR>", opts)
 keymap("n", "<leader>f", "<CMD>Telescope find_files<CR>", opts)
 keymap("n", "<leader>h", "<CMD>Telescope live_grep<CR>", opts)
