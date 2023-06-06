@@ -3,8 +3,6 @@
   - [neovim](https://formulae.brew.sh/formula/neovim)
   - [nodejs](https://formulae.brew.sh/formula/node@18)
   - [perl](https://formulae.brew.sh/formula/perl)
-  - [tectonic](https://formulae.brew.sh/formula/tectonic)
-  - [skim](https://formulae.brew.sh/cask/skim)
   - [python](https://www.python.org/downloads)
   - [rust](https://formulae.brew.sh/formula/rust)
   - [zip](https://formulae.brew.sh/formula/zip)

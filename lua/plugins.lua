@@ -24,26 +24,34 @@ if success then
 	return packer.startup(function(use)
 		use("wbthomason/packer.nvim")
 		use("nvim-lua/plenary.nvim")
-		use({ "catppuccin/nvim", as = "catppuccin" })
+
 		use("windwp/nvim-autopairs")
-		use("nvim-treesitter/nvim-treesitter")
-		use("nvim-lualine/lualine.nvim")
-		use({ "nvim-tree/nvim-web-devicons", opt = true })
-		use("lewis6991/gitsigns.nvim")
-		use("nvim-telescope/telescope.nvim")
-		use("williamboman/mason.nvim")
-		use("williamboman/mason-lspconfig.nvim")
-		use("neovim/nvim-lspconfig")
-		use("jay-babu/mason-null-ls.nvim")
-		use("jose-elias-alvarez/null-ls.nvim")
+		use({ "catppuccin/nvim", as = "catppuccin" })
+
 		use("hrsh7th/nvim-cmp")
 		use("hrsh7th/cmp-nvim-lsp")
 		use("hrsh7th/cmp-buffer")
 		use("hrsh7th/cmp-path")
 		use("L3MON4D3/LuaSnip")
 		use("saadparwaiz1/cmp_luasnip")
+
 		use("numToStr/Comment.nvim")
-		use({ "lervag/vimtex" })
+		use("lewis6991/gitsigns.nvim")
+
+		use("neovim/nvim-lspconfig")
+
+		use("nvim-lualine/lualine.nvim")
+
+		use("williamboman/mason.nvim")
+		use("williamboman/mason-lspconfig.nvim")
+		use("jay-babu/mason-null-ls.nvim")
+
+		use("jose-elias-alvarez/null-ls.nvim")
+
+		use("nvim-treesitter/nvim-treesitter")
+		use("nvim-telescope/telescope.nvim")
+
+		use({ "nvim-tree/nvim-web-devicons", opt = true })
 
 		if packer_bootstrap then
 			packer.sync()
